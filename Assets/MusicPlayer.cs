@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SplashToGame : MonoBehaviour {
+public class MusicPlayer : MonoBehaviour {
     [SerializeField] int delaySeconds = 1;
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
+
+    // Use this for initialization
+    void Start () {
         Invoke("LoadGame", delaySeconds);
 	}
 	
