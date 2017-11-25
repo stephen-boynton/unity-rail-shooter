@@ -21,6 +21,12 @@ public class Player : MonoBehaviour {
     {
         MoveX();
         MoveY();
+        ProcessRotation();
+    }
+
+    private void ProcessRotation() 
+    {
+        transform.localRotation = Quaternion.Euler(0f, -5f, 0f);
     }
 
     private void MoveX()
